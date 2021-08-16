@@ -1,0 +1,38 @@
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 980px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--section-color);
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.headerDetails {
+  margin-left: 40px;
+}
+
+.headerTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.headerSubtitle {
+  font-size: 22px;
+  opacity: 0.64;
+}
+
+.socialMediaIcons {
+  margin-top: 5px;
+  margin-right: 20px;
+}
