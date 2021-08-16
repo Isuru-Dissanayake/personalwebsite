@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 import Icon from "@mdi/react";
@@ -20,6 +20,7 @@ const onClickSocialIcon = (item) => {
 };
 
 const HeaderTemplate = (props) => {
+  const {} = props;
   return (
     <div className="headerContainer">
       <div className="headerImage">

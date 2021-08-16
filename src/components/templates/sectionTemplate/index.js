@@ -1,34 +1,48 @@
 import React from "react";
 import "./styles.css";
 
-function renderComponent(numberOfEntries, data) {
-  const list = [];
+function renderEachEntry(data) {
+  return (
+    <>
+      {data.map((data, key) => {
+        return (
+          <div className="entryContainer">
+            <div className="entryTitleContainer">
+              <div className="entryTitle">{data.title}</div>
+              <div className="entryDate">{data.date}</div>
+            </div>
+            <div className="entrySubtitle">{data.subTitle}</div>
+            <div className="entryDetails">{data.details}</div>
+          </div>
+        );
+      })}
+    </>
+  );
+}
 
-  for (var i = 0; i < numberOfEntries; i++) {
-    list.push(
-      <div className="entryContainer">
-        <div className="entryTitleContainer">
-          <div className="entryTitle">University of Moratuwa</div>
-          <div className="entryDate">September 2017 - April 2022</div>
-        </div>
-        <div className="entrySubtitle">
-          B.Sc. Engineering (Electronics and Telecommunications)
-        </div>
-        <div className="entryDetails">Semester 6 Undergraduate</div>
-      </div>
-    );
-  }
-
-  return <div>{list}</div>;
+function renderCoursesData(data) {
+  return (
+    <>
+      {data.map((data, key) => {
+        return <div className="entrySubtitle">{data}</div>;
+      })}
+    </>
+  );
 }
 
 const SectionTemplate = (props) => {
-  const { numberOfEntries, title, data } = props;
+  const { isEducationSection, title, data, coursesData } = props;
 
   return (
     <div className="sectionContainer">
       <div className="sectionTitle">{title}</div>
-      {renderComponent(numberOfEntries, data)}
+      {renderEachEntry(data)}
+      {isEducationSection && (
+        <div className="coursesContainer">
+          <div className="entryTitle">Certificates and Courses</div>
+          {renderCoursesData(coursesData)}
+        </div>
+      )}
     </div>
   );
 };
