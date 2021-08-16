@@ -10,7 +10,7 @@ body {
   opacity: var(--opacity);
 }
 .light-theme {
-  --background-color: #e0e6e6;
+  --background-color: #f5f7f7;
   --text-color: #002f34;
   --section-color: #ffffff;
   --opacity: 100%;
