@@ -48,7 +48,6 @@ const HeaderTemplate = (props) => {
           />
         </div>
       </div>
-      <div className="headerToggle"></div>
     </div>
   );
 };
