@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import "./styles.css";
 
+import { HeaderTemplate } from "../../templates";
+
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <div className="App">
-        <h1>Hello CodeSandbox</h1>
-        <h2>Start editing to see some magic happen!</h2>
+      <div className="homeContainer">
+        <HeaderTemplate />
       </div>
     );
   }
