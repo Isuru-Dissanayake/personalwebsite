@@ -53,3 +53,9 @@
 .coursesContainer {
   margin-top: 40px;
 }
+
+.courseName {
+  margin-top: 5px;
+  font-size: 20px;
+  opacity: 0.64;
+}

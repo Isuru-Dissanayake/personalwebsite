@@ -24,7 +24,7 @@ function renderCoursesData(data) {
   return (
     <>
       {data.map((data, key) => {
-        return <div className="entrySubtitle">{data}</div>;
+        return <div className="courseName">{data}</div>;
       })}
     </>
   );
