@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import "./styles.css";
 
-import { HeaderTemplate, SectionTemplate } from "../../templates";
+import {
+  HeaderTemplate,
+  SectionTemplate,
+  SkillsTemplate
+} from "../../templates";
 import { educationData } from "../../../assets/data/educationData";
 import { coursesData } from "../../../assets/data/coursesData";
+import { skillsData } from "../../../assets/data/skillsData";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -54,6 +59,7 @@ class HomePage extends React.Component {
           data={educationData}
           coursesData={coursesData}
         />
+        <SkillsTemplate data={skillsData} />
       </div>
     );
   }
