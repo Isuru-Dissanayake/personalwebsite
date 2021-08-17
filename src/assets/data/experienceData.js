@@ -11,6 +11,6 @@ export const experienceData = [
     date: "April 2018 - April 2019",
     subTitle: "Ikon, Sri Lanka",
     details:
-      "Designed marketing campaigns for several leading brands in Sri Lanka. Creates Artworks/videos to build brand awareness."
+      "Designed marketing campaigns for several leading brands in Sri Lanka. Created Artworks/videos to build brand awareness."
   }
 ];
