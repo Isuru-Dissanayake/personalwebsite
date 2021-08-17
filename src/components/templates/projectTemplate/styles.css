@@ -1,0 +1,61 @@
+.sectionContainer {
+  max-width: 980px;
+  background-color: var(--section-color);
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.entryTitle {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.entryTitleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.entryDate {
+  font-size: 20px;
+  opacity: 0.64;
+  text-align: right;
+  padding-left: 20px;
+}
+
+.entryContainer {
+  margin-top: 20px;
+}
+
+.entrySubtitle {
+  font-size: 20px;
+  opacity: 0.64;
+}
+
+.entryDetails {
+  font-size: 20px;
+  opacity: 0.64;
+  margin-top: 6px;
+}
+
+.coursesContainer {
+  margin-top: 40px;
+}
+
+.courseName {
+  margin-top: 5px;
+  font-size: 20px;
+  opacity: 0.64;
+}
