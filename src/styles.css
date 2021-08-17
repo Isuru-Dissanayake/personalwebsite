@@ -8,6 +8,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   opacity: var(--opacity);
+  padding-bottom: 30px;
 }
 .light-theme {
   --background-color: #f5f7f7;

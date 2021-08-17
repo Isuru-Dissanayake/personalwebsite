@@ -9,6 +9,8 @@ import {
 import { educationData } from "../../../assets/data/educationData";
 import { coursesData } from "../../../assets/data/coursesData";
 import { skillsData } from "../../../assets/data/skillsData";
+import { experienceData } from "../../../assets/data/experienceData";
+import { personalData } from "../../../assets/data/personalData";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -52,6 +54,7 @@ class HomePage extends React.Component {
         <HeaderTemplate
           toggleTheme={this.toggleTheme}
           isToggleChecked={isToggleChecked}
+          data={personalData}
         />
         <SectionTemplate
           isEducationSection={true}
@@ -60,6 +63,11 @@ class HomePage extends React.Component {
           coursesData={coursesData}
         />
         <SkillsTemplate data={skillsData} />
+        <SectionTemplate
+          isEducationSection={false}
+          title={"Experience"}
+          data={experienceData}
+        />
       </div>
     );
   }

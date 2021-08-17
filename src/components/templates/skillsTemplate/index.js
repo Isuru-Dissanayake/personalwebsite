@@ -16,7 +16,6 @@ const SkillsTemplate = (props) => {
   const [width, setWidth] = React.useState(window.innerWidth);
 
   const updateWidthAndHeight = () => {
-    console.log(width);
     setWidth(window.innerWidth);
     if (width < 600) {
       document.getElementById("skillsRow1").style.flexDirection = "column";

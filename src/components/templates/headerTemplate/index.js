@@ -6,37 +6,37 @@ import Icon from "@mdi/react";
 import { mdiLinkedin, mdiGithub } from "@mdi/js";
 import profilePhoto from "../../../assets/images/logo.jpg";
 
-const onClickSocialIcon = (item) => {
+const onClickSocialIcon = (item, data) => {
   switch (item) {
     case "LinkedIn":
-      var url = "https://www.linkedin.com/in/isurudissanayakepage/";
+      var url = data[0].linkedIn;
       break;
     case "Github":
-      var url = "https://github.com/Isuru-Dissanayake";
+      var url = data[0].gitHub;
       break;
     default:
-      var url = "https://www.linkedin.com/in/isurudissanayakepage/";
+      var url = data[0].linkedIn;
   }
   window.open(url);
 };
 
 const HeaderTemplate = (props) => {
-  const { toggleTheme, isToggleChecked } = props;
+  const { toggleTheme, isToggleChecked, data } = props;
   return (
     <div className="headerContainer">
       <div className="headerImage">
         <img src={profilePhoto} className="image" alt="profilePhoto" />
       </div>
       <div className="headerDetails">
-        <div className="headerTitle">Isuru Dissanayake</div>
-        <div className="headerSubtitle">Software Developer</div>
+        <div className="headerTitle">{data[0].name}</div>
+        <div className="headerSubtitle">{data[0].designation}</div>
         <div className="socialMediaIcons">
           <Icon
             path={mdiLinkedin}
             size={1.3}
             className="socialMediaIcons"
             onClick={() => {
-              onClickSocialIcon("LinkedIn");
+              onClickSocialIcon("LinkedIn", data);
             }}
           />
           <Icon
@@ -44,7 +44,7 @@ const HeaderTemplate = (props) => {
             size={1.3}
             className="socialMediaIcons"
             onClick={() => {
-              onClickSocialIcon("Github");
+              onClickSocialIcon("Github", data);
             }}
           />
         </div>
