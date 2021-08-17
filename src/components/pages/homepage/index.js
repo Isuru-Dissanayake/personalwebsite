@@ -18,8 +18,10 @@ class HomePage extends React.Component {
 
   setThemeOnLoad = () => {
     if (localStorage.getItem("theme") === "dark-theme") {
+      this.setState({ isToggleChecked: true });
       this.setTheme("dark-theme");
     } else {
+      this.setState({ isToggleChecked: false });
       this.setTheme("light-theme");
     }
   };
