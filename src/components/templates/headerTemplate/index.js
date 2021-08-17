@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+import DarkModeToggle from "react-dark-mode-toggle";
 import Icon from "@mdi/react";
 import { mdiLinkedin, mdiGithub } from "@mdi/js";
 import profilePhoto from "../../../assets/images/logo.jpg";
@@ -20,7 +21,7 @@ const onClickSocialIcon = (item) => {
 };
 
 const HeaderTemplate = (props) => {
-  const {} = props;
+  const { toggleTheme, isToggleChecked } = props;
   return (
     <div className="headerContainer">
       <div className="headerImage">
@@ -48,6 +49,13 @@ const HeaderTemplate = (props) => {
           />
         </div>
       </div>
+      <DarkModeToggle
+        onChange={toggleTheme}
+        checked={isToggleChecked}
+        size={35}
+        speed={2}
+        className="darkModeToggle"
+      />
     </div>
   );
 };

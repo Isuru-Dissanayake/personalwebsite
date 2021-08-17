@@ -8,7 +8,7 @@ import { coursesData } from "../../../assets/data/coursesData";
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { isToggleChecked: false };
   }
 
   setTheme(themeName) {
@@ -25,10 +25,11 @@ class HomePage extends React.Component {
   };
 
   toggleTheme = () => {
-    console.log(1);
     if (localStorage.getItem("theme") === "dark-theme") {
+      this.setState({ isToggleChecked: false });
       this.setTheme("light-theme");
     } else {
+      this.setState({ isToggleChecked: true });
       this.setTheme("dark-theme");
     }
   };
@@ -38,9 +39,13 @@ class HomePage extends React.Component {
   }
 
   render() {
+    const { isToggleChecked } = this.state;
     return (
       <div className="homeContainer">
-        <HeaderTemplate toggleTheme={this.toggleTheme} />
+        <HeaderTemplate
+          toggleTheme={this.toggleTheme}
+          isToggleChecked={isToggleChecked}
+        />
         <SectionTemplate
           isEducationSection={true}
           title={"Education"}
