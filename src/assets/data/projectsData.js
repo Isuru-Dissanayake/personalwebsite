@@ -1,6 +1,9 @@
+import theamaya from "../images/theamaya.png";
+
 export const projectsData = [
   {
     title: "Combining object detectors for stereo images",
+    image: "",
     date: "",
     subTitle: "Research",
     link: "",
@@ -11,6 +14,7 @@ export const projectsData = [
   },
   {
     title: "the-amaya",
+    image: theamaya,
     date: "",
     subTitle: "Website",
     link: "https://isuru-dissanayake.github.io/the-amaya/",

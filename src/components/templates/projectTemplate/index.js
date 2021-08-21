@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import theamaya from "../../../assets/images/theamaya.png";
 
 function renderDetails(data) {
   return (
@@ -22,19 +23,37 @@ function renderEachEntry(data) {
     <>
       {data.map((data, key) => {
         return (
-          <div className="entryContainer">
+          <div className="projectContainer">
             <div className="entryTitleContainer">
               <div className="entryTitle">{data.title}</div>
               {data.date && <div className="entryDate">{data.date}</div>}
             </div>
-            <div
-              className="subtitleTag"
-              onClick={() => {
-                onClickSubtitleTag(data.link);
-              }}
-            >
-              {data.subTitle}
-            </div>
+            {data.image ? (
+              <div
+                className="projectHeader"
+                style={{
+                  backgroundImage: `url(${data.image})`
+                }}
+              >
+                <div
+                  className="subtitleTag"
+                  onClick={() => {
+                    onClickSubtitleTag(data.link);
+                  }}
+                >
+                  {data.subTitle}
+                </div>
+              </div>
+            ) : (
+              <div
+                className="subtitleTag"
+                onClick={() => {
+                  onClickSubtitleTag(data.link);
+                }}
+              >
+                {data.subTitle}
+              </div>
+            )}
             <div>{renderDetails(data.details)}</div>
           </div>
         );
