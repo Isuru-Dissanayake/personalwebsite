@@ -39,11 +39,21 @@
   margin-top: 20px;
 }
 
-.entrySubtitle {
+.subtitleTag {
+  color: var(--action-text);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  display: inline-block;
+  height: 26px;
   font-size: 20px;
-  opacity: 0.64;
+  background-color: var(--action-background);
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
-
 .entryDetails {
   font-size: 20px;
   opacity: 0.64;

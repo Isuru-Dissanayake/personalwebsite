@@ -1,6 +1,22 @@
 import React from "react";
 import "./styles.css";
 
+function renderDetails(data) {
+  return (
+    <>
+      {data.map((data) => {
+        return <div className="entryDetails">{data}</div>;
+      })}
+    </>
+  );
+}
+
+function onClickSubtitleTag(url) {
+  if (url) {
+    window.open(url);
+  }
+}
+
 function renderEachEntry(data) {
   return (
     <>
@@ -9,10 +25,17 @@ function renderEachEntry(data) {
           <div className="entryContainer">
             <div className="entryTitleContainer">
               <div className="entryTitle">{data.title}</div>
-              <div className="entryDate">{data.date}</div>
+              {data.date && <div className="entryDate">{data.date}</div>}
             </div>
-            <div className="entrySubtitle">{data.subTitle}</div>
-            <div className="entryDetails">{data.details}</div>
+            <div
+              className="subtitleTag"
+              onClick={() => {
+                onClickSubtitleTag(data.link);
+              }}
+            >
+              {data.subTitle}
+            </div>
+            <div>{renderDetails(data.details)}</div>
           </div>
         );
       })}
@@ -20,29 +43,13 @@ function renderEachEntry(data) {
   );
 }
 
-function renderCoursesData(data) {
-  return (
-    <>
-      {data.map((data, key) => {
-        return <div className="courseName">{data}</div>;
-      })}
-    </>
-  );
-}
-
 const ProjectTemplate = (props) => {
-  const { isEducationSection, title, data, coursesData } = props;
+  const { title, data } = props;
 
   return (
     <div className="sectionContainer">
       <div className="sectionTitle">{title}</div>
       {renderEachEntry(data)}
-      {isEducationSection && (
-        <div className="coursesContainer">
-          <div className="entryTitle">Certificates and Courses</div>
-          {renderCoursesData(coursesData)}
-        </div>
-      )}
     </div>
   );
 };

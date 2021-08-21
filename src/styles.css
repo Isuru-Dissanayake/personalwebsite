@@ -9,18 +9,23 @@ body {
   color: var(--text-color);
   opacity: var(--opacity);
   padding-bottom: 30px;
+  user-select: none;
 }
 .light-theme {
   --background-color: #f5f7f7;
   --text-color: #002f34;
   --section-color: #ffffff;
   --opacity: 100%;
+  --action-text: #ffffff;
+  --action-background: #2a65ea;
 }
 .dark-theme {
   --background-color: #15171c;
   --text-color: #ffffff;
   --section-color: #202227;
   --opacity: 87%;
+  --action-text: #ffffff;
+  --action-background: #4881ff;
 }
 
 @font-face {

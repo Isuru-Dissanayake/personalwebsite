@@ -4,13 +4,16 @@ import "./styles.css";
 import {
   HeaderTemplate,
   SectionTemplate,
-  SkillsTemplate
+  SkillsTemplate,
+  ProjecyTemplate,
+  ProjectTemplate
 } from "../../templates";
 import { educationData } from "../../../assets/data/educationData";
 import { coursesData } from "../../../assets/data/coursesData";
 import { skillsData } from "../../../assets/data/skillsData";
 import { experienceData } from "../../../assets/data/experienceData";
 import { personalData } from "../../../assets/data/personalData";
+import { projectsData } from "../../../assets/data/projectsData";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -67,6 +70,11 @@ class HomePage extends React.Component {
           isEducationSection={false}
           title={"Experience"}
           data={experienceData}
+        />
+        <ProjectTemplate
+          isEducationSection={false}
+          title={"Projects"}
+          data={projectsData}
         />
       </div>
     );
