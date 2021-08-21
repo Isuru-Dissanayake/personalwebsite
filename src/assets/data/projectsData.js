@@ -1,4 +1,6 @@
 import theamaya from "../images/theamaya.png";
+import notesapp from "../images/notesapp.png";
+import procviz from "../images/procviz.png";
 
 export const projectsData = [
   {
@@ -21,6 +23,29 @@ export const projectsData = [
     details: [
       "A personal website built with React as a learning project.",
       "Figma was used as the designing tool. "
+    ]
+  },
+  {
+    title: "4NOTE4 Notes app",
+    image: notesapp,
+    date: "",
+    subTitle: "Download",
+    link: "https://github.com/Isuru-Dissanayake/News-App",
+    details: [
+      "A notes app built with Electron for Window OS.",
+      "Features such as Create, save, edit, and orgainze notes with tags are already implemented. Note sharing and edit history features will are still under development.",
+      "V1.0.0 is released"
+    ]
+  },
+  {
+    title: "procViz",
+    image: procviz,
+    date: "",
+    subTitle: "Simulation",
+    link: "https://proc-viz.vercel.app/",
+    details: [
+      "Simulation of an Instruction Set Architecture(ISA) for a custom processor using P5.js.",
+      "Code is hosted on GitHub repository and deployed with Verce"
     ]
   }
 ];

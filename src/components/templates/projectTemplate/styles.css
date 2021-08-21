@@ -76,5 +76,6 @@
   padding: 10px;
   height: 160px;
   border-radius: 10px;
+  background-size: cover;
   background-position: center top;
 }
