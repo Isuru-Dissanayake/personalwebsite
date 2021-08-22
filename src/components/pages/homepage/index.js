@@ -5,8 +5,8 @@ import {
   HeaderTemplate,
   SectionTemplate,
   SkillsTemplate,
-  ProjecyTemplate,
-  ProjectTemplate
+  ProjectTemplate,
+  AchievementsTemplate
 } from "../../templates";
 import { educationData } from "../../../assets/data/educationData";
 import { coursesData } from "../../../assets/data/coursesData";
@@ -76,6 +76,7 @@ class HomePage extends React.Component {
           title={"Projects"}
           data={projectsData}
         />
+        <AchievementsTemplate />
       </div>
     );
   }
