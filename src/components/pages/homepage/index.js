@@ -14,6 +14,7 @@ import { skillsData } from "../../../assets/data/skillsData";
 import { experienceData } from "../../../assets/data/experienceData";
 import { personalData } from "../../../assets/data/personalData";
 import { projectsData } from "../../../assets/data/projectsData";
+import { achievementsData } from "../../../assets/data/achievementsData";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -76,7 +77,7 @@ class HomePage extends React.Component {
           title={"Projects"}
           data={projectsData}
         />
-        <AchievementsTemplate title={"Achievements"} />
+        <AchievementsTemplate title={"Achievements"} data={achievementsData} />
       </div>
     );
   }
