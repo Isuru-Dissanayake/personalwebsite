@@ -18,6 +18,8 @@ body {
   --opacity: 100%;
   --action-text: #ffffff;
   --action-background: #2a65ea;
+  --primary-background-dark: #1b2e59;
+  --primary-dark: #3b599b;
 }
 .dark-theme {
   --background-color: #15171c;
@@ -26,6 +28,8 @@ body {
   --opacity: 87%;
   --action-text: #ffffff;
   --action-background: #4881ff;
+  --primary-background-dark: #1b2e59;
+  --primary-dark: #1e387e;
 }
 
 @font-face {

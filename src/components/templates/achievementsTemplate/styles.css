@@ -1,0 +1,61 @@
+.achievementsContainer {
+  max-width: 980px;
+  background-color: var(--section-color);
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
+.itemsContainer {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.achievementCard {
+  width: 250px;
+  min-height: 300px;
+  border-radius: 10px;
+  background-color: var(--background-color);
+  padding-bottom: 20px;
+}
+
+.cardHeader {
+  color: var(--action-text);
+  padding: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-background-dark) 0%,
+    var(--primary-dark) 100%
+  );
+}
+
+.cardTitle {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: Left;
+  padding-left: 10px;
+}
+
+.cardSubTitle {
+  margin-top: 10px;
+  opacity: 0.64;
+  font-size: 18px;
+  text-align: Left;
+  padding: 10px;
+}
