@@ -76,7 +76,7 @@ class HomePage extends React.Component {
           title={"Projects"}
           data={projectsData}
         />
-        <AchievementsTemplate />
+        <AchievementsTemplate title={"Achievements"} />
       </div>
     );
   }
