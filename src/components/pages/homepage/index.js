@@ -5,7 +5,6 @@ import {
   HeaderTemplate,
   SectionTemplate,
   SkillsTemplate,
-  ProjecyTemplate,
   ProjectTemplate
 } from "../../templates";
 import { educationData } from "../../../assets/data/educationData";
